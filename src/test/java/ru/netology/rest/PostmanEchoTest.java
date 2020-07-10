@@ -24,7 +24,7 @@ public class PostmanEchoTest {
                 .statusCode(200)
                 .body("data", equalTo("hello netology"))
                 .header("content-type", "application/json; charset=utf-8")
-                .body("headers.content-length", equalTo("14"))
+                .body("headers.content-length", equalTo("10"))
                 .contentType(ContentType.JSON)
                 .body("json", equalTo(null))
         ;
