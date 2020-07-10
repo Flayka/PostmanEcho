@@ -16,7 +16,8 @@ public class PostmanEchoTest {
 
         given()
                 .baseUri("https://postman-echo.com")
-                .body("hello netology")
+                .contentType("text/plain; charset=UTF-8")
+                .body("Привет")
                 .when()
                 .post("/post")
 
@@ -24,7 +25,7 @@ public class PostmanEchoTest {
                 .statusCode(200)
                 .body("data", equalTo("hello netology"))
                 .header("content-type", "application/json; charset=utf-8")
-                .body("headers.content-length", equalTo("10"))
+                .body("headers.content-length", equalTo("12"))
                 .contentType(ContentType.JSON)
                 .body("json", equalTo(null))
         ;
