@@ -23,7 +23,7 @@ public class PostmanEchoTest {
 
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("hello netology"))
+                .body("data", equalTo("Привет"))
                 .header("content-type", "application/json; charset=utf-8")
                 .body("headers.content-length", equalTo("12"))
                 .contentType(ContentType.JSON)
